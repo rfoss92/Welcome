@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123025758-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-123025758-1');
+  </script>
+
+
+  <title>Welcome</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Your Welcome Page" />
+  <meta name="Keywords" content="Ryan Foss, Welcome" />
+  <meta name="author" content="Ryan Foss" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="Welcome.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="content">
+
+	  <h1>Good Morning!</h1>
+
+	  <section class="weather">
+		  <div id="date"></div>	  	
+		  <div id="time"></div>
+		  <div id="description"></div>
+		  <div id="temp"></div>
+		  <div id="humidity"></div>
+		  <div id="wind"></div>
+	  </section>
+
+		<div class="row">
+
+			<section class="col-sm-6">
+	    	<button type="button" class="btn btn-primary btn-lg" onclick="window.open('https://en.wikipedia.org/wiki/Special:Random');">Random Wikipedia Article</button>
+
+	      <form>
+	        <div class="input-group">
+	    			<input id="searchTerm"  type="text" class="form-control" placeholder="Search...">
+	    			<div class="input-group-btn">
+		      		<button  id="search" class="btn btn-default" type="submit">
+		        		<i class="glyphicon glyphicon-search"></i>
+		      		</button>
+	    			</div>
+	  			</div>
+	      </form>
+	      <div id="output"></div>	      
+
+			</section>	
+
+			<section class="col-sm-6 quote">
+			  <button type="button" class="btn btn-primary btn-lg" id=quoteButton>Get Quote!</button>
+				<a id="tweetLink"><img src="https://cdn3.iconfinder.com/data/icons/social-icons-5/606/Twitter.png" /></a>		  
+			  <p id="quote-content"></p>
+			  <p id="quote-author"></p>
+			</section>
+
+		</div>
+	</div>
+
+<script src="Welcome.js"></script>
+</body>
