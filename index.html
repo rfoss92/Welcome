@@ -29,10 +29,10 @@
 	<div class="content">
 
 	  <h1>Good Morning!</h1>
-
-	  <section class="weather">
 		  <div id="date"></div>	  	
 		  <div id="time"></div>
+
+	  <section class="weather">
 		  <div id="description"></div>
 		  <div id="temp"></div>
 		  <div id="humidity"></div>
@@ -40,7 +40,12 @@
 	  </section>
 
 		<div class="row">
-
+			<section class="col-sm-6 quote">
+			  <button type="button" class="btn btn-primary btn-lg" id=quoteButton>Get Quote!</button>
+				<a id="tweetLink"><img src="https://cdn3.iconfinder.com/data/icons/social-icons-5/606/Twitter.png" /></a>		  
+			  <p id="quote-content"></p>
+			  <p id="quote-author"></p>
+			</section>
 			<section class="col-sm-6">
 	    	<button type="button" class="btn btn-primary btn-lg" onclick="window.open('https://en.wikipedia.org/wiki/Special:Random');">Random Wikipedia Article</button>
 
@@ -58,15 +63,9 @@
 
 			</section>	
 
-			<section class="col-sm-6 quote">
-			  <button type="button" class="btn btn-primary btn-lg" id=quoteButton>Get Quote!</button>
-				<a id="tweetLink"><img src="https://cdn3.iconfinder.com/data/icons/social-icons-5/606/Twitter.png" /></a>		  
-			  <p id="quote-content"></p>
-			  <p id="quote-author"></p>
-			</section>
+
 
 		</div>
 	</div>
-
 <script src="Welcome.js"></script>
 </body>

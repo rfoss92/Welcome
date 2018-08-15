@@ -46,10 +46,10 @@
   function update(weather) {
     $("#date").html(date);    
     $("#time").html(time);      
-    $("#description").html(weather.description);
-    $("#temp").html(weather.temp + "°C");
-    $("#humidity").html("Humidity: " + weather.humidity + "%");
-    $("#wind").html("Wind Speed: " + weather.wind + " mph");
+    $("#description").html(weather.description + '<hr>');
+    $("#temp").html(weather.temp + "°C<hr>");
+    $("#humidity").html("Humidity: " + weather.humidity + "%<hr>");
+    $("#wind").html("Wind: " + weather.wind + " mph<hr>");
   }
 
 })();
@@ -87,8 +87,8 @@
       async: false,
       dataType: "json",
       success: function(data, status, jqXHR){
-        for(var i = 0; i < data[1].length; i++) {
-          $("#output").prepend(
+        for(var i = 1; i < 6; i++) {
+          $("#output").append(
             "<div class='well'><a href=" 
             + data[3][i] 
             + " target='_blank'><h2>"
