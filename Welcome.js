@@ -14,6 +14,20 @@
   date = month + "/" + day + "/" + year;
   let time = hour + ":" + min;
 
+if (hour > 5 && hour <= 12) {
+  $('#greeting').text('Good Morning!');
+  document.body.style.backgroundImage = "url('morning.jpg')";
+} else if (hour > 12 && hour <= 18) {
+  $('#greeting').text('Good Afternoon!');
+  document.body.style.backgroundImage = "url('afternoon.jpg')";
+} else if (hour > 18 && hour <= 21) {
+  $('#greeting').text('Good Evening!');
+  document.body.style.backgroundImage = "url('evening.jpg')";
+} else if (hour > 21 || hour <= 5) {
+  $('#greeting').text('Good Night!');
+  document.body.style.backgroundImage = "url('night.jpg')";
+}
+
   // GeoLocation
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(sendRequest);
