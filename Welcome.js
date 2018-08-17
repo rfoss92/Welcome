@@ -58,10 +58,14 @@ if (hour > 5 && hour <= 12) {
 
   // Update HTML
   function update(weather) {
+    
+    let fahrenheit = weather.temp * 9 / 5 + 32;
+    fahrenheit = Math.round(fahrenheit);
+
     $("#date").html(date);    
     $("#time").html(time);      
     $("#description").html(weather.description + '<hr>');
-    $("#temp").html(weather.temp + "°C<hr>");
+    $("#temp").html(fahrenheit + "<sup>°F</sup>, " + weather.temp + "<sup>°C</sup><hr>");
     $("#humidity").html("Humidity: " + weather.humidity + "%<hr>");
     $("#wind").html("Wind: " + weather.wind + " mph<hr>");
   }
