@@ -16,16 +16,16 @@
 
 if (hour > 5 && hour <= 12) {
   $('#greeting').text('Good Morning!');
-  document.body.style.backgroundImage = "url('morning.jpg')";
+  document.body.style.backgroundImage = "url('img/morning.jpg')";
 } else if (hour > 12 && hour <= 18) {
   $('#greeting').text('Good Afternoon!');
-  document.body.style.backgroundImage = "url('afternoon.jpg')";
+  document.body.style.backgroundImage = "url('img/afternoon.jpg')";
 } else if (hour > 18 && hour <= 21) {
   $('#greeting').text('Good Evening!');
-  document.body.style.backgroundImage = "url('evening.jpg')";
+  document.body.style.backgroundImage = "url('img/evening.jpg')";
 } else if (hour > 21 || hour <= 5) {
   $('#greeting').text('Good Night!');
-  document.body.style.backgroundImage = "url('night.jpg')";
+  document.body.style.backgroundImage = "url('img/night.jpg')";
 }
 
   // GeoLocation
