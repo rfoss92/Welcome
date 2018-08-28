@@ -21,15 +21,14 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="Welcome.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
 	<div class="content">
 
 	  <h1 id="greeting">Good Morning!</h1>
-		  <div id="date"></div>	  	
-		  <div id="time"></div>
+		  <time id="date"></time><br>	  	
+		  <time id="time"></time>
 
 	  <section class="weather">
 		  <div id="description"></div>
@@ -41,9 +40,12 @@
 		<div class="row">
 			<section class="col-sm-6 quote">
 			  <button type="button" class="btn btn-primary btn-lg" id=quoteButton>Get Quote!</button>
-				<a id="tweetLink"><img src="https://cdn3.iconfinder.com/data/icons/social-icons-5/606/Twitter.png" /></a>		  
+	  
 			  <p id="quote-content"></p>
-			  <p id="quote-author"></p>
+			  <p id="quote-author"></p>				
+			  <button id="tweetLink" aria-label="Tweet this">
+			  	<img src="https://cdn3.iconfinder.com/data/icons/social-icons-5/606/Twitter.png" />
+			  </button>	
 			</section>
 			
 			<section class="col-sm-6">
@@ -52,7 +54,7 @@
 	        <div class="input-group">
 	    			<input id="searchTerm"  type="text" class="form-control" placeholder="Search...">
 	    			<div class="input-group-btn">
-		      		<button  id="search" class="btn btn-default" type="submit">
+		      		<button  id="search" class="btn btn-default" type="submit" aria-label="Search">
 		        		<i class="glyphicon glyphicon-search"></i>
 		      		</button>
 	    			</div>
@@ -63,5 +65,7 @@
 
 		</div>
 	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="Welcome.js"></script>
 </body>
