@@ -41,6 +41,7 @@
   function sendRequest(position) {
     let url = "http://api.openweathermap.org/data/2.5/forecast?lat="
       + position.coords.latitude + "&lon=" + position.coords.longitude + "&appid=1815c1cb674522f41e5935a2267ee5b6";
+      console.log(position.coords.latitude + "&lon=" + position.coords.longitude)
     let xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = () => {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
